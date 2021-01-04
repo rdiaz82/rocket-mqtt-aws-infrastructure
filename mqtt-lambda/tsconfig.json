@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",                          
+    "module": "commonjs",  
+    "outDir": "./lib",   
+    "baseUrl": "./", 
+    "rootDir": "./src",               
+    "strict": true,
+    "declaration": true,
+    "importHelpers": true,                           
+    "esModuleInterop": true,                  
+    "skipLibCheck": true,                   
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+  }
+}

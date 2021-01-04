@@ -1,0 +1,33 @@
+{
+  "name": "rocket-mqtt-aws-infrastructure",
+  "version": "1.0.61",
+  "description": "Booster rocket for MQTT brigde between AWS IOT Core and booster projects",
+  "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "release": "npm run build && npm version patch && npm publish"
+  },
+  "keywords": [
+    "Booster Framework",
+    "Booster Rocket",
+    "Serverless",
+    "AWS IOT Core"
+  ],
+  "author": "Roberto Diaz",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-cdk/aws-iot": "1.67.0",
+    "tslib": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "@boostercloud/framework-types": "^0.9.3",
+    "@boostercloud/framework-provider-aws-infrastructure": "^0.9.3",
+    "@aws-cdk/core": "1.67.0",
+    "@aws-cdk/aws-lambda": "1.67.0"
+  }
+}
