@@ -1,6 +1,6 @@
 {
   "name": "rocket-mqtt-aws-infrastructure",
-  "version": "1.0.61",
+  "version": "1.1.1",
   "description": "Booster rocket for MQTT brigde between AWS IOT Core and booster projects",
   "main": "./lib/index.js",
   "files": [
@@ -18,7 +18,7 @@
     "AWS IOT Core"
   ],
   "author": "Roberto Diaz",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "@aws-cdk/aws-iot": "1.67.0",
     "tslib": "^2.0.3"
