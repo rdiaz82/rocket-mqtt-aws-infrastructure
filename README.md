@@ -10,7 +10,7 @@
 ## What is this?
 Internet of Things (IOT) applications are very related with event based applications because normally sensors generate events that can be processed and other parts of the system can react to them. 
 
-This Booster Rocket enables the possibility to receive IOT events in a Booster application when a new event is publish from a sensor connected to the AWS IOT MQTT broker.
+This Booster Rocket enables the possibility to receive IOT events in a [Booster application](https://booster.cloud) when a new event is publish from a sensor connected to the [AWS IOT MQTT](https://aws.amazon.com/iot/) broker.
 
 ## How it works?
 The way to integrate your Booster Project with the AWS IOT MQTT broker is really simple:
@@ -36,7 +36,7 @@ config.provider = config.provider = Provider([
 ```
 The array `topic` contains all your desired topics. Everytime that a new measurement is published in those topics a new event will be created in your Booster application
 
- **3. Create a new Event in your project.** You can create the event using the Booster CLI or manually:
+ **3. Create a new Event in your project.** You can create the event using the [Booster CLI](https://github.com/boostercloud/booster/tree/master/docs/#3-first-event) or manually:
  ```typescript
  import { Event } from '@boostercloud/framework-core'
 import { UUID } from '@boostercloud/framework-types'
@@ -55,9 +55,9 @@ export class MeasurementCreated {
   }
 }
 ```
-When a sensor publish a new measurement into the MQTT topic that you are tracking, your booster app will receive a new `MeasurementCreated` event. This event includes the `timestamp`, the `topic` where the message was published and the payload of your MQTT message into the `data` field.
+When a sensor publish a new measurement into a MQTT topic that you are tracking, your Booster Application will receive a new `MeasurementCreated` event. This event includes the `timestamp`, the `topic` where the message was published and the payload of your MQTT message into the `data` field.
 
-**4. Create a new Entity in your project** In the same way as the event you can use the Booster CLI or create it manualy:
+**4. Create a new Entity in your project** In the same way as the event you can use the [Booster CLI](https://github.com/boostercloud/booster/tree/master/docs/#4-first-entity) or create it manualy:
 ```typescript
 import { Entity, Reduces } from '@boostercloud/framework-core'
 import { UUID } from '@boostercloud/framework-types'
@@ -74,7 +74,7 @@ export class Measurement {
 }
 ```
 
-**5. Create a Read Model** using the CLI or manually:
+**5. Create a Read Model** using the [Booster CLI](https://github.com/boostercloud/booster/tree/master/docs/#5-first-read-model) or manually:
 ```typescript
 import { ReadModel, Projects } from '@boostercloud/framework-core'
 import { UUID, ProjectionResult } from '@boostercloud/framework-types'
@@ -97,13 +97,16 @@ export class MeasurementReadModel {
 ```
 **NOTE:** Inside the Read Model you can perform data transformation between the received event from the MQTT broker and your client logic.
 
-**6. Deploy your application** using the Booster CLI.
+**6. Deploy your application** using the Booster CLI:
+```bash
+boost deploy -e production
+```
 
-## Ask the community
-If you have any question or doubt about how this rocket works just ping me or reach me in the Booster Framework Discord
+## Any question?
+If you have any question or doubt about how this rocket works ping me or reach me in the [Booster Framework Discord](https://discord.gg/bDY8MKx)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-This project is licensed under the Apache License, Version 2.0. .
+This project is licensed under the Apache License, Version 2.0.
